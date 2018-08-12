@@ -1,14 +1,24 @@
 import React, { Component } from 'react';
 
+function addTodo(text) {
+  return {
+    type: 'ADD_TODO',
+    text
+  };
+}
+
 class StockPrice extends Component {
-  constructor() {
-    super();
+  componentDidMount() {
+    this.props.dispatch(addTodo('Read the docs'));
   }
+
   render() {
+    const { data } = this.props;
     return (
-      <div>
-        <p> test </p>
-      </div>
+      <div>data</div>
+      //   <div>
+      //     <p> test </p>
+      //   </div>
     );
   }
 }
