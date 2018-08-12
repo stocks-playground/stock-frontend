@@ -1,5 +1,5 @@
 // GENERATED CODE -- DO NOT EDIT!
-
+// eslint-disable-next-line
 'use strict';
 var grpc = require('grpc');
 var stock_stock_manager_pb = require('../stock/stock_manager_pb.js');
@@ -12,7 +12,9 @@ function serialize_StockPriceRequest(arg) {
 }
 
 function deserialize_StockPriceRequest(buffer_arg) {
-  return stock_stock_manager_pb.StockPriceRequest.deserializeBinary(new Uint8Array(buffer_arg));
+  return stock_stock_manager_pb.StockPriceRequest.deserializeBinary(
+    new Uint8Array(buffer_arg)
+  );
 }
 
 function serialize_StockPriceResponse(arg) {
@@ -23,11 +25,12 @@ function serialize_StockPriceResponse(arg) {
 }
 
 function deserialize_StockPriceResponse(buffer_arg) {
-  return stock_stock_manager_pb.StockPriceResponse.deserializeBinary(new Uint8Array(buffer_arg));
+  return stock_stock_manager_pb.StockPriceResponse.deserializeBinary(
+    new Uint8Array(buffer_arg)
+  );
 }
 
-
-var StockManagerService = exports.StockManagerService = {
+var StockManagerService = (exports.StockManagerService = {
   getStockPrices: {
     path: '/StockManager/GetStockPrices',
     requestStream: false,
@@ -37,8 +40,10 @@ var StockManagerService = exports.StockManagerService = {
     requestSerialize: serialize_StockPriceRequest,
     requestDeserialize: deserialize_StockPriceRequest,
     responseSerialize: serialize_StockPriceResponse,
-    responseDeserialize: deserialize_StockPriceResponse,
-  },
-};
+    responseDeserialize: deserialize_StockPriceResponse
+  }
+});
 
-exports.StockManagerClient = grpc.makeGenericClientConstructor(StockManagerService);
+exports.StockManagerClient = grpc.makeGenericClientConstructor(
+  StockManagerService
+);

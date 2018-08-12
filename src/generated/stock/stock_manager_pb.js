@@ -6,7 +6,7 @@
  * @public
  */
 // GENERATED CODE -- DO NOT EDIT!
-
+/* eslint-disable */
 var jspb = require('google-protobuf');
 var goog = jspb;
 var global = Function('return this')();
@@ -33,44 +33,42 @@ if (goog.DEBUG && !COMPILED) {
   proto.StockPriceRequest.displayName = 'proto.StockPriceRequest';
 }
 
-
 if (jspb.Message.GENERATE_TO_OBJECT) {
-/**
- * Creates an object representation of this proto suitable for use in Soy templates.
- * Field names that are reserved in JavaScript and will be renamed to pb_name.
- * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
- * For the list of reserved names please see:
- *     com.google.apps.jspb.JsClassTemplate.JS_RESERVED_WORDS.
- * @param {boolean=} opt_includeInstance Whether to include the JSPB instance
- *     for transitional soy proto support: http://goto/soy-param-migration
- * @return {!Object}
- */
-proto.StockPriceRequest.prototype.toObject = function(opt_includeInstance) {
-  return proto.StockPriceRequest.toObject(opt_includeInstance, this);
-};
-
-
-/**
- * Static version of the {@see toObject} method.
- * @param {boolean|undefined} includeInstance Whether to include the JSPB
- *     instance for transitional soy proto support:
- *     http://goto/soy-param-migration
- * @param {!proto.StockPriceRequest} msg The msg instance to transform.
- * @return {!Object}
- * @suppress {unusedLocalVariables} f is only used for nested messages
- */
-proto.StockPriceRequest.toObject = function(includeInstance, msg) {
-  var f, obj = {
-    symbol: jspb.Message.getFieldWithDefault(msg, 1, "")
+  /**
+   * Creates an object representation of this proto suitable for use in Soy templates.
+   * Field names that are reserved in JavaScript and will be renamed to pb_name.
+   * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
+   * For the list of reserved names please see:
+   *     com.google.apps.jspb.JsClassTemplate.JS_RESERVED_WORDS.
+   * @param {boolean=} opt_includeInstance Whether to include the JSPB instance
+   *     for transitional soy proto support: http://goto/soy-param-migration
+   * @return {!Object}
+   */
+  proto.StockPriceRequest.prototype.toObject = function(opt_includeInstance) {
+    return proto.StockPriceRequest.toObject(opt_includeInstance, this);
   };
 
-  if (includeInstance) {
-    obj.$jspbMessageInstance = msg;
-  }
-  return obj;
-};
-}
+  /**
+   * Static version of the {@see toObject} method.
+   * @param {boolean|undefined} includeInstance Whether to include the JSPB
+   *     instance for transitional soy proto support:
+   *     http://goto/soy-param-migration
+   * @param {!proto.StockPriceRequest} msg The msg instance to transform.
+   * @return {!Object}
+   * @suppress {unusedLocalVariables} f is only used for nested messages
+   */
+  proto.StockPriceRequest.toObject = function(includeInstance, msg) {
+    var f,
+      obj = {
+        symbol: jspb.Message.getFieldWithDefault(msg, 1, '')
+      };
 
+    if (includeInstance) {
+      obj.$jspbMessageInstance = msg;
+    }
+    return obj;
+  };
+}
 
 /**
  * Deserializes binary data (in protobuf wire format).
@@ -79,10 +77,9 @@ proto.StockPriceRequest.toObject = function(includeInstance, msg) {
  */
 proto.StockPriceRequest.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.StockPriceRequest;
+  var msg = new proto.StockPriceRequest();
   return proto.StockPriceRequest.deserializeBinaryFromReader(msg, reader);
 };
-
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
@@ -98,18 +95,17 @@ proto.StockPriceRequest.deserializeBinaryFromReader = function(msg, reader) {
     }
     var field = reader.getFieldNumber();
     switch (field) {
-    case 1:
-      var value = /** @type {string} */ (reader.readString());
-      msg.setSymbol(value);
-      break;
-    default:
-      reader.skipField();
-      break;
+      case 1:
+        var value = /** @type {string} */ (reader.readString());
+        msg.setSymbol(value);
+        break;
+      default:
+        reader.skipField();
+        break;
     }
   }
   return msg;
 };
-
 
 /**
  * Serializes the message to binary data (in protobuf wire format).
@@ -120,7 +116,6 @@ proto.StockPriceRequest.prototype.serializeBinary = function() {
   proto.StockPriceRequest.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
-
 
 /**
  * Serializes the given message to binary data (in protobuf wire
@@ -133,29 +128,22 @@ proto.StockPriceRequest.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
   f = message.getSymbol();
   if (f.length > 0) {
-    writer.writeString(
-      1,
-      f
-    );
+    writer.writeString(1, f);
   }
 };
-
 
 /**
  * optional string symbol = 1;
  * @return {string}
  */
 proto.StockPriceRequest.prototype.getSymbol = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ''));
 };
-
 
 /** @param {string} value */
 proto.StockPriceRequest.prototype.setSymbol = function(value) {
   jspb.Message.setField(this, 1, value);
 };
-
-
 
 /**
  * Generated by JsPbCodeGenerator.
@@ -168,7 +156,14 @@ proto.StockPriceRequest.prototype.setSymbol = function(value) {
  * @constructor
  */
 proto.StockPriceResponse = function(opt_data) {
-  jspb.Message.initialize(this, opt_data, 0, -1, proto.StockPriceResponse.repeatedFields_, null);
+  jspb.Message.initialize(
+    this,
+    opt_data,
+    0,
+    -1,
+    proto.StockPriceResponse.repeatedFields_,
+    null
+  );
 };
 goog.inherits(proto.StockPriceResponse, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
@@ -181,47 +176,47 @@ if (goog.DEBUG && !COMPILED) {
  */
 proto.StockPriceResponse.repeatedFields_ = [2];
 
-
-
 if (jspb.Message.GENERATE_TO_OBJECT) {
-/**
- * Creates an object representation of this proto suitable for use in Soy templates.
- * Field names that are reserved in JavaScript and will be renamed to pb_name.
- * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
- * For the list of reserved names please see:
- *     com.google.apps.jspb.JsClassTemplate.JS_RESERVED_WORDS.
- * @param {boolean=} opt_includeInstance Whether to include the JSPB instance
- *     for transitional soy proto support: http://goto/soy-param-migration
- * @return {!Object}
- */
-proto.StockPriceResponse.prototype.toObject = function(opt_includeInstance) {
-  return proto.StockPriceResponse.toObject(opt_includeInstance, this);
-};
-
-
-/**
- * Static version of the {@see toObject} method.
- * @param {boolean|undefined} includeInstance Whether to include the JSPB
- *     instance for transitional soy proto support:
- *     http://goto/soy-param-migration
- * @param {!proto.StockPriceResponse} msg The msg instance to transform.
- * @return {!Object}
- * @suppress {unusedLocalVariables} f is only used for nested messages
- */
-proto.StockPriceResponse.toObject = function(includeInstance, msg) {
-  var f, obj = {
-    symbol: jspb.Message.getFieldWithDefault(msg, 1, ""),
-    pricesList: jspb.Message.toObjectList(msg.getPricesList(),
-    proto.StockPrice.toObject, includeInstance)
+  /**
+   * Creates an object representation of this proto suitable for use in Soy templates.
+   * Field names that are reserved in JavaScript and will be renamed to pb_name.
+   * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
+   * For the list of reserved names please see:
+   *     com.google.apps.jspb.JsClassTemplate.JS_RESERVED_WORDS.
+   * @param {boolean=} opt_includeInstance Whether to include the JSPB instance
+   *     for transitional soy proto support: http://goto/soy-param-migration
+   * @return {!Object}
+   */
+  proto.StockPriceResponse.prototype.toObject = function(opt_includeInstance) {
+    return proto.StockPriceResponse.toObject(opt_includeInstance, this);
   };
 
-  if (includeInstance) {
-    obj.$jspbMessageInstance = msg;
-  }
-  return obj;
-};
-}
+  /**
+   * Static version of the {@see toObject} method.
+   * @param {boolean|undefined} includeInstance Whether to include the JSPB
+   *     instance for transitional soy proto support:
+   *     http://goto/soy-param-migration
+   * @param {!proto.StockPriceResponse} msg The msg instance to transform.
+   * @return {!Object}
+   * @suppress {unusedLocalVariables} f is only used for nested messages
+   */
+  proto.StockPriceResponse.toObject = function(includeInstance, msg) {
+    var f,
+      obj = {
+        symbol: jspb.Message.getFieldWithDefault(msg, 1, ''),
+        pricesList: jspb.Message.toObjectList(
+          msg.getPricesList(),
+          proto.StockPrice.toObject,
+          includeInstance
+        )
+      };
 
+    if (includeInstance) {
+      obj.$jspbMessageInstance = msg;
+    }
+    return obj;
+  };
+}
 
 /**
  * Deserializes binary data (in protobuf wire format).
@@ -230,10 +225,9 @@ proto.StockPriceResponse.toObject = function(includeInstance, msg) {
  */
 proto.StockPriceResponse.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.StockPriceResponse;
+  var msg = new proto.StockPriceResponse();
   return proto.StockPriceResponse.deserializeBinaryFromReader(msg, reader);
 };
-
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
@@ -249,23 +243,22 @@ proto.StockPriceResponse.deserializeBinaryFromReader = function(msg, reader) {
     }
     var field = reader.getFieldNumber();
     switch (field) {
-    case 1:
-      var value = /** @type {string} */ (reader.readString());
-      msg.setSymbol(value);
-      break;
-    case 2:
-      var value = new proto.StockPrice;
-      reader.readMessage(value,proto.StockPrice.deserializeBinaryFromReader);
-      msg.addPrices(value);
-      break;
-    default:
-      reader.skipField();
-      break;
+      case 1:
+        var value = /** @type {string} */ (reader.readString());
+        msg.setSymbol(value);
+        break;
+      case 2:
+        var value = new proto.StockPrice();
+        reader.readMessage(value, proto.StockPrice.deserializeBinaryFromReader);
+        msg.addPrices(value);
+        break;
+      default:
+        reader.skipField();
+        break;
     }
   }
   return msg;
 };
-
 
 /**
  * Serializes the message to binary data (in protobuf wire format).
@@ -276,7 +269,6 @@ proto.StockPriceResponse.prototype.serializeBinary = function() {
   proto.StockPriceResponse.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
-
 
 /**
  * Serializes the given message to binary data (in protobuf wire
@@ -289,52 +281,43 @@ proto.StockPriceResponse.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
   f = message.getSymbol();
   if (f.length > 0) {
-    writer.writeString(
-      1,
-      f
-    );
+    writer.writeString(1, f);
   }
   f = message.getPricesList();
   if (f.length > 0) {
-    writer.writeRepeatedMessage(
-      2,
-      f,
-      proto.StockPrice.serializeBinaryToWriter
-    );
+    writer.writeRepeatedMessage(2, f, proto.StockPrice.serializeBinaryToWriter);
   }
 };
-
 
 /**
  * optional string symbol = 1;
  * @return {string}
  */
 proto.StockPriceResponse.prototype.getSymbol = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ''));
 };
-
 
 /** @param {string} value */
 proto.StockPriceResponse.prototype.setSymbol = function(value) {
   jspb.Message.setField(this, 1, value);
 };
 
-
 /**
  * repeated StockPrice prices = 2;
  * @return {!Array.<!proto.StockPrice>}
  */
 proto.StockPriceResponse.prototype.getPricesList = function() {
-  return /** @type{!Array.<!proto.StockPrice>} */ (
-    jspb.Message.getRepeatedWrapperField(this, proto.StockPrice, 2));
+  return /** @type{!Array.<!proto.StockPrice>} */ (jspb.Message.getRepeatedWrapperField(
+    this,
+    proto.StockPrice,
+    2
+  ));
 };
-
 
 /** @param {!Array.<!proto.StockPrice>} value */
 proto.StockPriceResponse.prototype.setPricesList = function(value) {
   jspb.Message.setRepeatedWrapperField(this, 2, value);
 };
-
 
 /**
  * @param {!proto.StockPrice=} opt_value
@@ -342,15 +325,18 @@ proto.StockPriceResponse.prototype.setPricesList = function(value) {
  * @return {!proto.StockPrice}
  */
 proto.StockPriceResponse.prototype.addPrices = function(opt_value, opt_index) {
-  return jspb.Message.addToRepeatedWrapperField(this, 2, opt_value, proto.StockPrice, opt_index);
+  return jspb.Message.addToRepeatedWrapperField(
+    this,
+    2,
+    opt_value,
+    proto.StockPrice,
+    opt_index
+  );
 };
-
 
 proto.StockPriceResponse.prototype.clearPricesList = function() {
   this.setPricesList([]);
 };
-
-
 
 /**
  * Generated by JsPbCodeGenerator.
@@ -370,49 +356,47 @@ if (goog.DEBUG && !COMPILED) {
   proto.StockPrice.displayName = 'proto.StockPrice';
 }
 
-
 if (jspb.Message.GENERATE_TO_OBJECT) {
-/**
- * Creates an object representation of this proto suitable for use in Soy templates.
- * Field names that are reserved in JavaScript and will be renamed to pb_name.
- * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
- * For the list of reserved names please see:
- *     com.google.apps.jspb.JsClassTemplate.JS_RESERVED_WORDS.
- * @param {boolean=} opt_includeInstance Whether to include the JSPB instance
- *     for transitional soy proto support: http://goto/soy-param-migration
- * @return {!Object}
- */
-proto.StockPrice.prototype.toObject = function(opt_includeInstance) {
-  return proto.StockPrice.toObject(opt_includeInstance, this);
-};
-
-
-/**
- * Static version of the {@see toObject} method.
- * @param {boolean|undefined} includeInstance Whether to include the JSPB
- *     instance for transitional soy proto support:
- *     http://goto/soy-param-migration
- * @param {!proto.StockPrice} msg The msg instance to transform.
- * @return {!Object}
- * @suppress {unusedLocalVariables} f is only used for nested messages
- */
-proto.StockPrice.toObject = function(includeInstance, msg) {
-  var f, obj = {
-    open: +jspb.Message.getFieldWithDefault(msg, 1, 0.0),
-    high: +jspb.Message.getFieldWithDefault(msg, 2, 0.0),
-    low: +jspb.Message.getFieldWithDefault(msg, 3, 0.0),
-    close: +jspb.Message.getFieldWithDefault(msg, 4, 0.0),
-    volume: jspb.Message.getFieldWithDefault(msg, 5, 0),
-    time: jspb.Message.getFieldWithDefault(msg, 6, 0)
+  /**
+   * Creates an object representation of this proto suitable for use in Soy templates.
+   * Field names that are reserved in JavaScript and will be renamed to pb_name.
+   * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
+   * For the list of reserved names please see:
+   *     com.google.apps.jspb.JsClassTemplate.JS_RESERVED_WORDS.
+   * @param {boolean=} opt_includeInstance Whether to include the JSPB instance
+   *     for transitional soy proto support: http://goto/soy-param-migration
+   * @return {!Object}
+   */
+  proto.StockPrice.prototype.toObject = function(opt_includeInstance) {
+    return proto.StockPrice.toObject(opt_includeInstance, this);
   };
 
-  if (includeInstance) {
-    obj.$jspbMessageInstance = msg;
-  }
-  return obj;
-};
-}
+  /**
+   * Static version of the {@see toObject} method.
+   * @param {boolean|undefined} includeInstance Whether to include the JSPB
+   *     instance for transitional soy proto support:
+   *     http://goto/soy-param-migration
+   * @param {!proto.StockPrice} msg The msg instance to transform.
+   * @return {!Object}
+   * @suppress {unusedLocalVariables} f is only used for nested messages
+   */
+  proto.StockPrice.toObject = function(includeInstance, msg) {
+    var f,
+      obj = {
+        open: +jspb.Message.getFieldWithDefault(msg, 1, 0.0),
+        high: +jspb.Message.getFieldWithDefault(msg, 2, 0.0),
+        low: +jspb.Message.getFieldWithDefault(msg, 3, 0.0),
+        close: +jspb.Message.getFieldWithDefault(msg, 4, 0.0),
+        volume: jspb.Message.getFieldWithDefault(msg, 5, 0),
+        time: jspb.Message.getFieldWithDefault(msg, 6, 0)
+      };
 
+    if (includeInstance) {
+      obj.$jspbMessageInstance = msg;
+    }
+    return obj;
+  };
+}
 
 /**
  * Deserializes binary data (in protobuf wire format).
@@ -421,10 +405,9 @@ proto.StockPrice.toObject = function(includeInstance, msg) {
  */
 proto.StockPrice.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.StockPrice;
+  var msg = new proto.StockPrice();
   return proto.StockPrice.deserializeBinaryFromReader(msg, reader);
 };
-
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
@@ -440,38 +423,37 @@ proto.StockPrice.deserializeBinaryFromReader = function(msg, reader) {
     }
     var field = reader.getFieldNumber();
     switch (field) {
-    case 1:
-      var value = /** @type {number} */ (reader.readDouble());
-      msg.setOpen(value);
-      break;
-    case 2:
-      var value = /** @type {number} */ (reader.readDouble());
-      msg.setHigh(value);
-      break;
-    case 3:
-      var value = /** @type {number} */ (reader.readDouble());
-      msg.setLow(value);
-      break;
-    case 4:
-      var value = /** @type {number} */ (reader.readDouble());
-      msg.setClose(value);
-      break;
-    case 5:
-      var value = /** @type {number} */ (reader.readUint64());
-      msg.setVolume(value);
-      break;
-    case 6:
-      var value = /** @type {number} */ (reader.readUint64());
-      msg.setTime(value);
-      break;
-    default:
-      reader.skipField();
-      break;
+      case 1:
+        var value = /** @type {number} */ (reader.readDouble());
+        msg.setOpen(value);
+        break;
+      case 2:
+        var value = /** @type {number} */ (reader.readDouble());
+        msg.setHigh(value);
+        break;
+      case 3:
+        var value = /** @type {number} */ (reader.readDouble());
+        msg.setLow(value);
+        break;
+      case 4:
+        var value = /** @type {number} */ (reader.readDouble());
+        msg.setClose(value);
+        break;
+      case 5:
+        var value = /** @type {number} */ (reader.readUint64());
+        msg.setVolume(value);
+        break;
+      case 6:
+        var value = /** @type {number} */ (reader.readUint64());
+        msg.setTime(value);
+        break;
+      default:
+        reader.skipField();
+        break;
     }
   }
   return msg;
 };
-
 
 /**
  * Serializes the message to binary data (in protobuf wire format).
@@ -482,7 +464,6 @@ proto.StockPrice.prototype.serializeBinary = function() {
   proto.StockPrice.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
-
 
 /**
  * Serializes the given message to binary data (in protobuf wire
@@ -495,108 +476,97 @@ proto.StockPrice.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
   f = message.getOpen();
   if (f !== 0.0) {
-    writer.writeDouble(
-      1,
-      f
-    );
+    writer.writeDouble(1, f);
   }
   f = message.getHigh();
   if (f !== 0.0) {
-    writer.writeDouble(
-      2,
-      f
-    );
+    writer.writeDouble(2, f);
   }
   f = message.getLow();
   if (f !== 0.0) {
-    writer.writeDouble(
-      3,
-      f
-    );
+    writer.writeDouble(3, f);
   }
   f = message.getClose();
   if (f !== 0.0) {
-    writer.writeDouble(
-      4,
-      f
-    );
+    writer.writeDouble(4, f);
   }
   f = message.getVolume();
   if (f !== 0) {
-    writer.writeUint64(
-      5,
-      f
-    );
+    writer.writeUint64(5, f);
   }
   f = message.getTime();
   if (f !== 0) {
-    writer.writeUint64(
-      6,
-      f
-    );
+    writer.writeUint64(6, f);
   }
 };
-
 
 /**
  * optional double Open = 1;
  * @return {number}
  */
 proto.StockPrice.prototype.getOpen = function() {
-  return /** @type {number} */ (+jspb.Message.getFieldWithDefault(this, 1, 0.0));
+  return /** @type {number} */ (+jspb.Message.getFieldWithDefault(
+    this,
+    1,
+    0.0
+  ));
 };
-
 
 /** @param {number} value */
 proto.StockPrice.prototype.setOpen = function(value) {
   jspb.Message.setField(this, 1, value);
 };
 
-
 /**
  * optional double High = 2;
  * @return {number}
  */
 proto.StockPrice.prototype.getHigh = function() {
-  return /** @type {number} */ (+jspb.Message.getFieldWithDefault(this, 2, 0.0));
+  return /** @type {number} */ (+jspb.Message.getFieldWithDefault(
+    this,
+    2,
+    0.0
+  ));
 };
-
 
 /** @param {number} value */
 proto.StockPrice.prototype.setHigh = function(value) {
   jspb.Message.setField(this, 2, value);
 };
 
-
 /**
  * optional double Low = 3;
  * @return {number}
  */
 proto.StockPrice.prototype.getLow = function() {
-  return /** @type {number} */ (+jspb.Message.getFieldWithDefault(this, 3, 0.0));
+  return /** @type {number} */ (+jspb.Message.getFieldWithDefault(
+    this,
+    3,
+    0.0
+  ));
 };
-
 
 /** @param {number} value */
 proto.StockPrice.prototype.setLow = function(value) {
   jspb.Message.setField(this, 3, value);
 };
 
-
 /**
  * optional double Close = 4;
  * @return {number}
  */
 proto.StockPrice.prototype.getClose = function() {
-  return /** @type {number} */ (+jspb.Message.getFieldWithDefault(this, 4, 0.0));
+  return /** @type {number} */ (+jspb.Message.getFieldWithDefault(
+    this,
+    4,
+    0.0
+  ));
 };
-
 
 /** @param {number} value */
 proto.StockPrice.prototype.setClose = function(value) {
   jspb.Message.setField(this, 4, value);
 };
-
 
 /**
  * optional uint64 volume = 5;
@@ -606,12 +576,10 @@ proto.StockPrice.prototype.getVolume = function() {
   return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 5, 0));
 };
 
-
 /** @param {number} value */
 proto.StockPrice.prototype.setVolume = function(value) {
   jspb.Message.setField(this, 5, value);
 };
-
 
 /**
  * optional uint64 time = 6;
@@ -621,11 +589,9 @@ proto.StockPrice.prototype.getTime = function() {
   return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 6, 0));
 };
 
-
 /** @param {number} value */
 proto.StockPrice.prototype.setTime = function(value) {
   jspb.Message.setField(this, 6, value);
 };
-
 
 goog.object.extend(exports, proto);
