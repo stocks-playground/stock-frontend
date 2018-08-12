@@ -1,8 +1,7 @@
 
 protos:
-	@protoc --proto_path=protobuf/proto-schema \
-			-I${GOPATH}/src/github.com/grpc-ecosystem/grpc-gateway/third_party/googleapis \
-			--plugin=protoc-gen-ts=./node_modules/.bin/protoc-gen-ts \
-			--js_out=import_style=commonjs,binary:protobuf \
-			--ts_out=service=true:protobuf \
-			protobuf/proto-schema/stock/*.proto
+	@grpc_tools_node_protoc  --proto_path=protobuf/proto-schema\
+		--js_out=import_style=commonjs,binary:src/generated/ \
+		--grpc_out=src/generated/ \
+		--plugin=protoc-gen-grpc=`which grpc_tools_node_protoc_plugin` \
+		protobuf/proto-schema/stock/*.proto

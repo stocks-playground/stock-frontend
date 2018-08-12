@@ -11,7 +11,6 @@ var jspb = require('google-protobuf');
 var goog = jspb;
 var global = Function('return this')();
 
-var google_api_annotations_pb = require('../google/api/annotations_pb.js');
 goog.exportSymbol('proto.StockPrice', null, global);
 goog.exportSymbol('proto.StockPriceRequest', null, global);
 goog.exportSymbol('proto.StockPriceResponse', null, global);
@@ -153,7 +152,7 @@ proto.StockPriceRequest.prototype.getSymbol = function() {
 
 /** @param {string} value */
 proto.StockPriceRequest.prototype.setSymbol = function(value) {
-  jspb.Message.setProto3StringField(this, 1, value);
+  jspb.Message.setField(this, 1, value);
 };
 
 
@@ -317,21 +316,21 @@ proto.StockPriceResponse.prototype.getSymbol = function() {
 
 /** @param {string} value */
 proto.StockPriceResponse.prototype.setSymbol = function(value) {
-  jspb.Message.setProto3StringField(this, 1, value);
+  jspb.Message.setField(this, 1, value);
 };
 
 
 /**
  * repeated StockPrice prices = 2;
- * @return {!Array<!proto.StockPrice>}
+ * @return {!Array.<!proto.StockPrice>}
  */
 proto.StockPriceResponse.prototype.getPricesList = function() {
-  return /** @type{!Array<!proto.StockPrice>} */ (
+  return /** @type{!Array.<!proto.StockPrice>} */ (
     jspb.Message.getRepeatedWrapperField(this, proto.StockPrice, 2));
 };
 
 
-/** @param {!Array<!proto.StockPrice>} value */
+/** @param {!Array.<!proto.StockPrice>} value */
 proto.StockPriceResponse.prototype.setPricesList = function(value) {
   jspb.Message.setRepeatedWrapperField(this, 2, value);
 };
@@ -550,7 +549,7 @@ proto.StockPrice.prototype.getOpen = function() {
 
 /** @param {number} value */
 proto.StockPrice.prototype.setOpen = function(value) {
-  jspb.Message.setProto3FloatField(this, 1, value);
+  jspb.Message.setField(this, 1, value);
 };
 
 
@@ -565,7 +564,7 @@ proto.StockPrice.prototype.getHigh = function() {
 
 /** @param {number} value */
 proto.StockPrice.prototype.setHigh = function(value) {
-  jspb.Message.setProto3FloatField(this, 2, value);
+  jspb.Message.setField(this, 2, value);
 };
 
 
@@ -580,7 +579,7 @@ proto.StockPrice.prototype.getLow = function() {
 
 /** @param {number} value */
 proto.StockPrice.prototype.setLow = function(value) {
-  jspb.Message.setProto3FloatField(this, 3, value);
+  jspb.Message.setField(this, 3, value);
 };
 
 
@@ -595,7 +594,7 @@ proto.StockPrice.prototype.getClose = function() {
 
 /** @param {number} value */
 proto.StockPrice.prototype.setClose = function(value) {
-  jspb.Message.setProto3FloatField(this, 4, value);
+  jspb.Message.setField(this, 4, value);
 };
 
 
@@ -610,7 +609,7 @@ proto.StockPrice.prototype.getVolume = function() {
 
 /** @param {number} value */
 proto.StockPrice.prototype.setVolume = function(value) {
-  jspb.Message.setProto3IntField(this, 5, value);
+  jspb.Message.setField(this, 5, value);
 };
 
 
@@ -625,7 +624,7 @@ proto.StockPrice.prototype.getTime = function() {
 
 /** @param {number} value */
 proto.StockPrice.prototype.setTime = function(value) {
-  jspb.Message.setProto3IntField(this, 6, value);
+  jspb.Message.setField(this, 6, value);
 };
 
 
